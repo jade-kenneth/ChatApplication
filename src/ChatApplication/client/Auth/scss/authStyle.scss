@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
+body{
+    font-family: 'Roboto', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.authContainer{
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: url("../../img/bg.jpg") no-repeat;
+    background-size: cover;
+}
+
+.authForm{
+    height: auto;
+    width: 350px;
+    background: $background-color;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px grey;
+    
+    text-align: center;
+    .app-title{
+        color: $text-color;
+        padding: 1rem 0;
+        border-bottom: 1px solid grey;
+        width: 100%;
+        height: 10%;
+        @include flexCenter(row);
+        gap: 10px;
+        .icon{
+            font-size: 2rem;
+        }
+    }
+    .inputs{
+        padding: 1rem 0;
+        max-width: 80%;
+        margin: auto;
+        height: auto;
+        @include flexCenter(column);
+        gap: 10px;
+        h5{
+            margin-right: auto;
+            font-size: 1rem;
+            span{
+                color:$text-color;
+                &:hover{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+label{
+    margin-right: auto;
+    font-weight: bold;
+    color:$text-color;
+    letter-spacing: 1px;
+}
+.authInput{
+    height: auto;
+    width: 100%;
+    @include flexCenter(column);
+    gap: 10px;
+    input{
+        width: 100%;
+        height: 40px;
+        border-radius: 4px;
+        outline: none;
+        border: none;
+        padding: 0.5rem;
+        font-weight: bold;
+    }
+    input[type=submit]{
+        background-color: $button-bg-color;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.checkBoxDiv{
+    margin-right: auto;
+}

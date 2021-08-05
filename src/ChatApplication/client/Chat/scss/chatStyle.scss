@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}   
+body,html{
+    height: 100vh;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.userUI{
+    background-color: $header-footer;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+    gap: 10px;
+    align-items: center;
+    .logout{
+        padding: 0.2rem;
+        cursor: pointer;
+        background-color: $background-color;
+        outline: none;
+    }
+    
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    
+    .allUser{
+        flex: 1;
+        height: 100vh;
+        width: 100%;
+        
+        @include flexCenter(column);
+        .container{
+            display: flex;
+            flex-direction: column;
+            background-color: $background-color;
+            height: 80%;
+            width: 80%;
+            overflow-y: scroll;
+            border-radius: 10px;
+            .title{
+                padding: 1rem;
+                background: $header-footer;
+            }
+           .user{
+               cursor: pointer;
+               &:hover{
+                   background-color: rgb(168, 151, 151);
+               }
+           }
+        }
+    }
+    .chatArea{
+        
+        @extend .allUser;
+        
+        flex: 1.5;
+        .container{
+
+            @extend.container;
+            @include flexCenter(column);
+            .name{
+                flex: 1;
+                padding: 0.5rem;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                gap: 10px;
+                background: $header-footer;
+                
+                .custom-avatar{
+                    
+                    border-radius: 50%;
+                    height: 100%;
+                    width: 10%;
+                    background: white;
+                    color: $background-color;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    @include flexCenter(column);
+                    
+    
+                    
+                }
+                .col{
+                    display: flex;
+                    flex-direction: column;
+                    h5{
+                        &.offline{
+                            color: red;
+                        }
+                        &.online{
+                            color: limegreen;
+                        }
+                    }
+                }
+                h2{
+                    font-weight: 700;
+                    color: black;
+                }
+            }
+            .body{
+                flex: 9;
+                padding: 2rem 0.5rem;
+                width: 100%;
+                overflow-y: scroll;
+                
+                
+                
+            }
+            .send{
+                flex: 1;
+                width: 100%;
+                background: $header-footer;
+                padding: 0.5rem;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                
+                .sendUI{
+                    
+                    height: 100%;
+                    
+                    @include flexCenter(row);
+                    border-radius: 60px;
+                    
+                    input{
+                        
+                        height: 90%;
+                        width: 90%;
+                        border: none;
+                        outline: none;
+                        padding: 1rem;
+                        border-radius: 50px;
+                        resize: none;
+                        font-weight: 700;
+                    }
+                    button{
+                        height: 90%;
+                        width: 10%;
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                        @include flexCenter(column);
+                        .icon{
+                            font-size: 1.7rem;
+                            color: $background-color;
+                        }
+                        &:hover{
+                            border-radius: 50%;
+                        }
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+    .allFriends{
+        flex: 1;
+        @extend  .allUser;
+        
+        .container{
+            @extend.container;
+            .contactText{
+                background: $header-footer;
+                width: 100%;
+                padding: 1rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                
+                
+            }
+            
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+    }
+}

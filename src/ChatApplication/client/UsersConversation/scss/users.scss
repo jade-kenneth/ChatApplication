@@ -1,0 +1,40 @@
+
+@import '../../scss/colors.scss';
+@import '../../scss/mixins.scss';
+
+
+
+.user-container{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    
+    &:hover{
+        background-color: rgb(180, 175, 175);
+        cursor: pointer;
+        
+    }
+    .user-content{
+        @include flexCenter(row);
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
+    .custom-avatar{
+        width: 50px;
+        height: 50px;
+        @include flexCenter(column);
+        background: wheat;
+        border-radius: 50%;
+        &.online{
+            background-color: limegreen;
+        }
+        &.offline{
+            background-color: rgb(205, 55, 50);
+        }
+    }
+    .notif{
+        margin-left: auto;
+    }
+    }
+}

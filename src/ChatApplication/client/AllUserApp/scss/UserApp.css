@@ -1,0 +1,20 @@
+.all_user_container {
+  width: 100%; }
+  .all_user_container .header {
+    padding: 1rem;
+    background-color: #e4caca; }
+  .all_user_container .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem; }
+    .all_user_container .row .custom-avatar {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background: wheat;
+      border-radius: 50%; }

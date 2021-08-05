@@ -1,0 +1,31 @@
+.user-container {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  border-radius: 10px; }
+  .user-container:hover {
+    background-color: #b4afaf;
+    cursor: pointer; }
+  .user-container .user-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%; }
+    .user-container .user-content .custom-avatar {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background: wheat;
+      border-radius: 50%; }
+      .user-container .user-content .custom-avatar.online {
+        background-color: limegreen; }
+      .user-container .user-content .custom-avatar.offline {
+        background-color: #cd3732; }
+    .user-container .user-content .notif {
+      margin-left: auto; }
