@@ -1,5 +1,5 @@
 # ChatApplication
-simple chat app
+simple chat app 
 
 THIS CHAT APP SIMPLY LET COMMUNICATE BETWEEN USER ADDED FROM USER LIST AND CURRENT USER
 
