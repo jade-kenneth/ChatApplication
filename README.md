@@ -9,9 +9,9 @@ SIGN UP - create new user
 
 HOW TO RUN THE PROGRAM
 
-TO RUN THE CLIENT - navigate client folder until reach the client folder 
+TO RUN THE CLIENT -
 
-navigate command: cd src/ChatApplication/client and npm start
+navigate command: npm start
 
 TO RUN THE SERVER - open new terminal
 
